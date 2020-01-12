@@ -1,0 +1,29 @@
+.wrapper {
+    font-size: 20px;
+    width: 800px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background: #ccc;
+    height: 50px;
+}
+
+aside {
+    background: lightblue;
+    height: 250px;
+    width: 200px;
+    float: left;
+}
+
+article {
+    background: lightblue;
+    height: 210px;
+    width: 560px;
+    float: left;
+    padding: 20px;
+}
+
+footer {
+    clear: both;
+}
