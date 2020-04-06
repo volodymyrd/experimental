@@ -1,4 +1,4 @@
-package com.gmail.volodymyrdotsenko.reactive_angular_mongo.model;
+package com.gmail.volodymyrdotsenko.reactive_angular_mongo.model.reservation;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
