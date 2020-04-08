@@ -1,0 +1,16 @@
+<app-item>
+  <h1>Title</h1>
+  <main #h></main>
+
+  <ng-template #t>
+    TEMPLATE CONTENT
+  </ng-template>
+</app-item>
+
+
+<h1 colory #c="colory">TEST COLORY DIRECTIVE1</h1>
+<h1 colory #d="colory">TEST COLORY DIRECTIVE2</h1>
+
+<button (click)="c.changeColor('green')">Change Color</button>
+<br/>
+<input type="text" (input)="d.changeColor($event.target.value)"/>
