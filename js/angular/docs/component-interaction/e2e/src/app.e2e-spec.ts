@@ -94,6 +94,33 @@ describe('workspace-project App', () => {
     });
   });
 
+  // Parent listens for child event
+  it('should not emit the event initially', function() {
+    let voteLabel = element(by.tagName('app-vote-taker'))
+      .element(by.tagName('h3')).getText();
+    expect(voteLabel).toBe('Agree: 0, Disagree: 0');
+  });
+
+  it('should process Agree vote', function() {
+    let agreeButton1 = element.all(by.tagName('app-voter')).get(0)
+      .all(by.tagName('button')).get(0);
+    agreeButton1.click().then(function() {
+      let voteLabel = element(by.tagName('app-vote-taker'))
+        .element(by.tagName('h3')).getText();
+      expect(voteLabel).toBe('Agree: 1, Disagree: 0');
+    });
+  });
+
+  it('should process Disagree vote', function() {
+    let agreeButton1 = element.all(by.tagName('app-voter')).get(1)
+      .all(by.tagName('button')).get(1);
+    agreeButton1.click().then(function() {
+      let voteLabel = element(by.tagName('app-vote-taker'))
+        .element(by.tagName('h3')).getText();
+      expect(voteLabel).toBe('Agree: 1, Disagree: 1');
+    });
+  });
+
   function getActual() {
     let versionTag = element(by.tagName('app-version-child'));
     let label = versionTag.element(by.tagName('h3')).getText();
