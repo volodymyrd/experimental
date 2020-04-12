@@ -134,6 +134,25 @@ describe('workspace-project App', () => {
     };
   }
 
+  // Parent interacts with child via local variable
+  // it('timer and parent seconds should match', function() {
+  //   let parent = element(by.tagName('app-countdown-parent-lv'));
+  //   let message = parent.element(by.tagName('app-countdown-timer')).getText();
+  //   browser.sleep(10); // give `seconds` a chance to catchup with `message`
+  //   let seconds = parent.element(by.className('seconds')).getText();
+  //   expect(message).toContain(seconds);
+  // });
+
+  // it('should stop the countdown', function() {
+  //   const parent = element(by.tagName('app-countdown-parent-lv'));
+  //   const stopButton = parent.all(by.tagName('button')).get(1);
+  //
+  //   stopButton.click().then(function() {
+  //     const message = parent.element(by.tagName('app-countdown-timer')).getText();
+  //     expect(message).toContain('Holding');
+  //   });
+  // });
+
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
