@@ -12,6 +12,7 @@ import { VoterComponent } from './voter/voter.component';
 import { VoteTakerComponent } from './votetaker/votetaker.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { CountdownParentComponent } from './countdown-parent/countdown-parent.component';
+import { CountdownParent2Component } from './countdown-parent2/countdown-parent2.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CountdownParentComponent } from './countdown-parent/countdown-parent.co
     VoterComponent,
     VoteTakerComponent,
     CountdownTimerComponent,
-    CountdownParentComponent
+    CountdownParentComponent,
+    CountdownParent2Component,
   ],
   imports: [
     BrowserModule

@@ -35,16 +35,16 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
     this.clearTimer();
     // commented because e2e test failed because timeout.
 
-    // this.intervalId = window.setInterval(() => {
-    //   this.seconds -= 1;
-    //   if (this.seconds === 0) {
-    //     this.message = 'Blast off!';
-    //   } else {
-    //     if (this.seconds < 0) {
-    //       this.seconds = 10;
-    //     } // reset
-    //     this.message = `T-${this.seconds} seconds and counting`;
-    //   }
-    // }, 1000);
+    this.intervalId = window.setInterval(() => {
+      this.seconds -= 1;
+      if (this.seconds === 0) {
+        this.message = 'Blast off!';
+      } else {
+        if (this.seconds < 0) {
+          this.seconds = 10;
+        } // reset
+        this.message = `T-${this.seconds} seconds and counting`;
+      }
+    }, 1000);
   }
 }
