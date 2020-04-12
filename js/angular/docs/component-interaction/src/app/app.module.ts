@@ -13,6 +13,8 @@ import { VoteTakerComponent } from './votetaker/votetaker.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { CountdownParentComponent } from './countdown-parent/countdown-parent.component';
 import { CountdownParent2Component } from './countdown-parent2/countdown-parent2.component';
+import { MissionControlComponent } from './missioncontrol/missioncontrol.component';
+import { AstronautComponent } from './astronaut/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { CountdownParent2Component } from './countdown-parent2/countdown-parent2
     CountdownTimerComponent,
     CountdownParentComponent,
     CountdownParent2Component,
+    MissionControlComponent,
+    AstronautComponent,
   ],
   imports: [
     BrowserModule
