@@ -12,5 +12,9 @@ export class AppComponent {
   heroes = heroes;
   hero = this.heroes[0];
 
-  trackById(index: number, hero: Hero): number { return hero.id; }
+  condition = false;
+
+  trackById(index: number, hero: Hero): number {
+    return hero.id;
+  }
 }

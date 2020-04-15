@@ -15,3 +15,15 @@
     {{i}} {{odd}} {{hero.name}}
   </li>
 </ul>
+
+<h1>Custom appUnless directive</h1>
+<p>
+  The condition is currently
+  <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
+  <button
+    (click)="condition = !condition"
+    [ngClass]="{ 'a': condition, 'b': !condition }">
+    Toggle condition to {{condition ? 'false' : 'true'}}
+  </button>
+</p>
+<p *appUnless="condition">Show this sentence unless the condition is true.</p>
