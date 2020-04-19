@@ -1,1 +1,10 @@
-<app-name-editor></app-name-editor>
+<h1>Reactive Forms</h1>
+
+<nav>
+  <a (click)="toggleEditor('name')">Show Name</a>
+  <a (click)="toggleEditor('profile')">Show Profile</a>
+</nav>
+
+<app-name-editor *ngIf="isNameEditor"></app-name-editor>
+
+<app-profile-editor *ngIf="isProfileEditor"></app-profile-editor>

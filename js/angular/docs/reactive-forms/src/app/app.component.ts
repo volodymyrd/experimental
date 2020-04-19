@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
+export type EditorType = 'name' | 'profile';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'reactive-forms';
+
+  editor: EditorType = 'name';
+
+  get isNameEditor() {
+    return this.editor === 'name';
+  }
+
+  get isProfileEditor() {
+    return this.editor === 'profile';
+  }
+
+  toggleEditor(type: EditorType) {
+    this.editor = type;
+  }
 }
